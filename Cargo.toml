@@ -1,6 +1,20 @@
 [package]
-name = "rust-zero-to-prod"
+name = "rust_zero_to_prod"
 version = "0.1.0"
 edition = "2024"
+authors = ["Arturo Hernández <arturoaureliohr@gmail.com>"]
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "rust_zero_to_prod"
 
 [dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tokio-macros = { version = "0.2.0-alpha.6" }
+
+[dev-dependencies]
+reqwest = "0.12"
